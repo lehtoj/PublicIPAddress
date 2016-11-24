@@ -12,11 +12,17 @@ All you need is a way to periodically check current public IP-address and save t
 
 This PowerShell module provides a function to check current public IP-address and write the IP-address to a file in specified directory. In addition to this, a scheduled task can be created to do this periodically.
 
-If you intend to use a scheduled task, this module should be installed to %systemdrive%:\Program Files\WindowsPowerShell\Modules. Otherwise LOCAL SERVICE account cannot find this module and use its functions.
+If you intend to use a scheduled task, this module should be installed to %systemdrive%:\Program Files\WindowsPowerShell\Modules. Otherwise SYSTEM account cannot find this module and use its functions.
+
+Administrator privileges will also be required to create a scheduled task.
 
 When installing this module from the PowerShell Gallery, use "Install-Module -Name PublicIPAddress -Scope AllUsers" in order to install the module to Program Files.
 
 Queries for IP-address should be limited to no more than once per five minutes. Otherwise your queries my be dropped.
+
+## Download
+
+[PowerShell Gallery](https://www.powershellgallery.com/packages/PublicIPAddress/)
 
 ## Examples
 
